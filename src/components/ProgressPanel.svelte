@@ -54,11 +54,12 @@
                         pointerEvents: 'auto'
                     },
                     formatter: function() {
-                        return "<b>Commit ID:</b> <a target=\"_blank\"href=\"https://github.com/doldecomp/melee/commit/" + this.point.commitId + "\">" + this.point.commitId + "</a>" +
-                            "<br><b>Commit Date:</b> " + new Date(this.point.x).toLocaleString() +
+                        return 
+                            "<b>" + (this.series.name === "Code percentage completed" ? "Code" : "Data") + " Percentage completed:</b> " + getPercentage(this.point.y) +
                             "<br><b>Trophies collected</b>: " + this.point.trophies + "/290" +
                             "<br><b>Event Matches completed:</b> " + this.point.events + "/51" +
-                            "<br><br><b>" + (this.series.name === "Code percentage completed" ? "Code" : "Data") + " Percentage completed:</b> " + getPercentage(this.point.y)
+                            "<br><br><b>Commit ID:</b> <a target=\"_blank\"href=\"https://github.com/doldecomp/melee/commit/" + this.point.commitId + "\">" + this.point.commitId + "</a>" +
+                            "<br><b>Commit Date:</b> " + new Date(this.point.x).toLocaleString()
                     }
                 },
                 xAxis: {
