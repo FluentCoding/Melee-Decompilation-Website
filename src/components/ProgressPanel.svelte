@@ -1,9 +1,10 @@
 <script>
     import Highcharts from 'highcharts'
     import Data from "highcharts/modules/data";
-    import { afterUpdate } from 'svelte';
+    import { afterUpdate, onMount } from 'svelte';
 
     let completion;
+    let chart;
     Data(Highcharts);
 
     afterUpdate(() => {
@@ -36,7 +37,7 @@
             }
 
             completion = codePct[codePct.length - 1].y
-            Highcharts.chart('container', {
+            chart = Highcharts.chart('container', {
                 chart: {
                     zoomType: 'x',
                     panning: true,
@@ -108,8 +109,9 @@
     }
 
     .container {
+        display: block;
         height: 400px;
-        max-width: 800px;
+        width: 800px;
         margin: 0 auto;
         margin-top: 50px;
     }
@@ -131,7 +133,7 @@
 
     @media (max-width: 1300px) {
 		.container {
-			max-width: 100%;
+			width: 80vw;
 		}
 	}
 </style>
