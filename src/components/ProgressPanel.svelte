@@ -24,14 +24,16 @@
                     y: parseFloat(values[2]) * 100 /* Percent */,
                     commitId: values[0],
                     trophies: values[4],
-                    events: values[5]
+                    events: values[5],
+                    isCode: true
                 })
                 dataPct.push({
                     x: parseFloat(values[1] * 1000),
                     y: parseFloat(values[3] * 100 /* Percent */),
                     commitId: values[0],
                     trophies: values[4],
-                    events: values[5]
+                    events: values[5],
+                    isCode: false
                 })
             }
 
@@ -54,9 +56,11 @@
                         pointerEvents: 'auto'
                     },
                     formatter: function() {
-                        return "<b>Commit ID:</b> <a target=\"_blank\"href=\"https://github.com/doldecomp/melee/commit/" + this.point.commitId + "\">" + this.point.commitId + 
-                            "</a><br><b>Trophies collected</b>: " + this.point.trophies + "/290" +
-                            "<br><b>Event Matches completed:</b> " + this.point.events + "/51"
+                        return "<b>Commit ID:</b> <a target=\"_blank\"href=\"https://github.com/doldecomp/melee/commit/" + this.point.commitId + "\">" + this.point.commitId + "</a>" +
+                            "<br><b>Commit Date:</b> " + new Date(this.point.x).toLocaleString() +
+                            "<br><b>Trophies collected</b>: " + this.point.trophies + "/290" +
+                            "<br><b>Event Matches completed:</b> " + this.point.events + "/51" +
+                            "<br><br><b>" + (this.point.isCode ? "Code" : "Data") + " Percentage completed:</b> " + getPercentage(this.point.y)
                     }
                 },
                 xAxis: {
