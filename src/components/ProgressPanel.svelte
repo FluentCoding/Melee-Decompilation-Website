@@ -99,12 +99,19 @@
     </div>
     <div class="title">{getPercentage(Math.floor(completion * 100) / 100)} completed!</div>
 {/if}
-<div id="container" style="height: 400px; max-width: 800px; margin: 0 auto; margin-top: 50px;" />
+<div id="container" class="container" />
 
 <style>
     .title {
         color: white;
         font-size: 32px;
+    }
+
+    .container {
+        height: 400px;
+        max-width: 800px;
+        margin: 0 auto;
+        margin-top: 50px;
     }
 
     #progressbar {
@@ -121,4 +128,10 @@
         height: 20px;
         border-radius: 10px;
     }
+
+    @media (max-width: 1300px) {
+		.container {
+			max-width: 100%;
+		}
+	}
 </style>

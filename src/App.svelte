@@ -38,12 +38,12 @@ import { selectedOption } from './store.js'
 		color: white;
 		text-transform: uppercase;
 		font-size: 48px;
-		-webkit-text-stroke: 2px black;
 	}
 
 	.description {
         color: white;
         font-size: 24px;
+		overflow: auto;
     }
 
 	@media (min-width: 640px) {
@@ -52,16 +52,24 @@ import { selectedOption } from './store.js'
 		}
 	}
 
-
 	.flex-container {
 		display: flex;
 		flex-direction: row;
 	}
 
 	@media (max-width: 1300px) {
+		main {
+			padding: 5px;
+			max-width: fit-content;
+		}
+
 		.flex-container {
 			flex-direction: column;
 			justify-content: center;
+		}
+
+		h1 {
+			font-size: 24px;
 		}
 	}
 </style>

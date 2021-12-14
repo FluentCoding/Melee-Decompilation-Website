@@ -49,10 +49,14 @@
         color: black;
     }
 
-    @media (max-width: 900px) {
-		.flex-button {
-			margin-left: 0;
-            margin-right: 0;
+    @media (max-width: 1300px) {
+		.button {
+			margin-left: 10px;
+            margin-right: 10px;
+            font-size: 20px;
+            width: 225px;
+            height: 40px;
+            line-height: 40px;
 		}
 	}
 </style>
