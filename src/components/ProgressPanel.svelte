@@ -55,8 +55,8 @@
                     },
                     formatter: function() {
                         return "<b>Commit ID:</b> <a target=\"_blank\"href=\"https://github.com/doldecomp/melee/commit/" + this.point.commitId + "\">" + this.point.commitId + 
-                            "</a><br><b>Trophies cleared</b>: " + this.point.trophies +
-                            "<br><b>Events cleared:</b> " + this.point.events
+                            "</a><br><b>Trophies collected</b>: " + this.point.trophies + "/290" +
+                            "<br><b>Event Matches completed:</b> " + this.point.events + "/51"
                     }
                 },
                 xAxis: {
