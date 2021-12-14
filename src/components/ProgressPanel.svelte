@@ -8,8 +8,8 @@
 
     afterUpdate(() => {
         async function handle() {
-            const res = await fetch('https://144.91.113.190/result.csv')
-            const lines = (await res.text()).split(/\r?\n/);
+            const res = await fetch('https://raw.githubusercontent.com/FluentCoding/MeleeDecompProgressCalc/master/result.csv')
+            const lines = (await res.text()).split("\r");
             let codePct = [];
             let dataPct = [];
 

@@ -58,7 +58,7 @@ import { selectedOption } from './store.js'
 		flex-direction: row;
 	}
 
-	@media (max-width: 900px) {
+	@media (max-width: 1300px) {
 		.flex-container {
 			flex-direction: column;
 			justify-content: center;
