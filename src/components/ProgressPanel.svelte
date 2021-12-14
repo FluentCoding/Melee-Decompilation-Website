@@ -54,8 +54,7 @@
                         pointerEvents: 'auto'
                     },
                     formatter: function() {
-                        return 
-                            "<b>" + (this.series.name === "Code percentage completed" ? "Code" : "Data") + " Percentage completed:</b> " + getPercentage(this.point.y) +
+                        return "<b>" + (this.series.name === "Code percentage completed" ? "Code" : "Data") + " Percentage completed:</b> " + getPercentage(this.point.y) +
                             "<br><b>Trophies collected</b>: " + this.point.trophies + "/290" +
                             "<br><b>Event Matches completed:</b> " + this.point.events + "/51" +
                             "<br><br><b>Commit ID:</b> <a target=\"_blank\"href=\"https://github.com/doldecomp/melee/commit/" + this.point.commitId + "\">" + this.point.commitId + "</a>" +
