@@ -55,7 +55,7 @@
                     }
                 },
                 subtitle: {
-                    text: 'SSBM 1.02 NTSC',
+                    text: 'SSBM 1.02 NTSC (' + codePct.length + ' recorded commits)',
                     style: {
                         color: 'lightgray'
                     }
