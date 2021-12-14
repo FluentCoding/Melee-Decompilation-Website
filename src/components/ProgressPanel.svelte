@@ -41,13 +41,24 @@
                 chart: {
                     zoomType: 'x',
                     panning: true,
-                    panKey: 'shift'
+                    panKey: 'shift',
+                    backgroundColor: 'transparent',
+                    style: {
+                        fontFamily: 'A-OTF Folk Pro',
+                        color: 'white'
+                    }
                 },
                 title: {
-                    text: 'Melee Decompilation Progress History'
+                    text: 'Melee Decompilation Progress History',
+                    style: {
+                        color: 'white'
+                    }
                 },
                 subtitle: {
-                    text: 'SSBM 1.02 NTSC'
+                    text: 'SSBM 1.02 NTSC',
+                    style: {
+                        color: 'lightgray'
+                    }
                 },
                 tooltip: {
                     valueDecimals: 2,
@@ -63,22 +74,50 @@
                     }
                 },
                 xAxis: {
-                    type: 'datetime'
+                    type: 'datetime',
+                    labels: {
+                        style: {
+                            color: 'white'
+                        }
+                    }
                 },
                 yAxis: {
                     labels: {
-                        format: '{value}%'
-                    }
+                        format: '{value}%',
+                        style: {
+                            color: 'white'
+                        }
+                    },
+                    title: false
                 },
                 series: [{
                     name: "Code percentage completed",
                     data: codePct,
-                    lineWidth: 1
+                    lineWidth: 4
                 }, {
                     name: "Data percentage completed",
                     data: dataPct,
-                    lineWidth: 1
-                }]
+                    lineWidth: 4,
+                    color: 'green'
+                }],
+                legend: {
+                    itemStyle: {
+                        color: 'white'
+                    }
+                },
+                plotOptions: {
+                    series: {
+                        states: {
+                            inactive: {
+                                opacity: 0.8,
+                                lineWidth: 2
+                            }
+                        }
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
             });
 
             return codePct[codePct.length - 1].y;
@@ -114,6 +153,11 @@
         width: 800px;
         margin: 0 auto;
         margin-top: 50px;
+
+        border: 4px solid orange;
+        box-shadow: 0 0 10px orange;
+        border-radius: 12px;
+        padding: 10px;
     }
 
     #progressbar {
