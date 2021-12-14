@@ -137,7 +137,7 @@
             <div style={"width: " + getPercentage(completion)} />
         </div>
     </div>
-    <div class="title">{getPercentage(Math.floor(completion * 100) / 100)} completed!</div>
+    <div class="title">{getPercentage(Math.floor(completion * 100) / 100)} complete!</div>
 {/if}
 <div id="container" class="container" />
 
