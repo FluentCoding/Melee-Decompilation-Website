@@ -1,10 +1,9 @@
 <script>
     import Highcharts from 'highcharts'
     import Data from "highcharts/modules/data";
-    import { afterUpdate, onMount } from 'svelte';
+    import { afterUpdate } from 'svelte';
 
-    let completion;
-    let chart;
+    let completion = 0;
     Data(Highcharts);
 
     afterUpdate(() => {
@@ -131,14 +130,12 @@
     }
 </script>
 
-{#if completion}
-    <div style="width: 100%; display: flex; justify-content: center;">
-        <div id="progressbar">
-            <div style={"width: " + getPercentage(completion)} />
-        </div>
+<div style="width: 100%; display: flex; justify-content: center;">
+    <div id="progressbar">
+        <div style={"width: " + getPercentage(completion)} />
     </div>
-    <div class="title">{getPercentage(Math.floor(completion * 100) / 100)} complete!</div>
-{/if}
+</div>
+<div class="title">{getPercentage(Math.floor(completion * 100) / 100)} complete!</div>
 <div id="container" class="container" />
 
 <style>
@@ -149,8 +146,8 @@
 
     .container {
         display: block;
-        height: 400px;
-        width: 800px;
+        min-height: 400px;
+        min-width: 800px;
         margin: 0 auto;
         margin-top: 50px;
 
