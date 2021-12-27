@@ -3,7 +3,7 @@ var ghpages = require('gh-pages');
 ghpages.publish(
     'public', // path to public directory
     {
-        branch: 'master',
+        branch: 'gh-pages',
         repo: 'https://github.com/FluentCoding/Melee-Decompilation-Website.git',
         user: {
             name: 'FluentCoding',
