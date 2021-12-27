@@ -25,6 +25,7 @@
     "typescript": "^4.0.0"
   },
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "highcharts": "^9.3.2",
     "sirv-cli": "^1.0.0"
   }
