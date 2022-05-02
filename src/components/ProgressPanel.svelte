@@ -111,7 +111,8 @@
                                 opacity: 0.8,
                                 lineWidth: 2
                             }
-                        }
+                        },
+                        stickyTracking: false
                     }
                 },
                 credits: {
